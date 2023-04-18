@@ -40,16 +40,3 @@ def borrarDirectorio(rutaDirectorio):
     for archivo in archivos:
         os.remove(os.path.join(rutaDirectorio, archivo))
     os.rmdir(rutaDirectorio)
-
-
-"""os.makedirs('Input')
-shutil.copy(
-    "C:/Users/sergi/OneDrive/Escritorio/Ejemplo/Ejemplo_1/Input/1190_003.jpg", './Input')
-os.makedirs('Output')
-escanearArchivo('./Input', './Output')
-borrarDirectorio('./Input')
-examen = leerRespuestas(os.path.join(
-    './Output', os.listdir('./Output')[0]), 75)
-solucion = leerRespuestas('Soluciones/2023-04-11_09-44-04__keys.csv', 75)
-nota = corregirExamen(examen, solucion, 1, 0.5, 75)
-borrarDirectorio('./Output')"""

@@ -1,12 +1,15 @@
-FROM python:3.8
+FROM python:3.9.16-slim-buster
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY . /app
+COPY requirements.txt ./
 
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+
 RUN pip3 install -r requirements.txt
 
-EXPOSE 5000
+COPY . .
 
-CMD ["python","./app.py"]
+EXPOSE 4000
+
+CMD [ "python", "app.py" ]
